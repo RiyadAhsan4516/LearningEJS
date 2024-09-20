@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TESTING EJS</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<h1>THE NAMES OF THE PLAYERS ARE :</h1>
+<ul id="namesList">
+    <%for(let i = 0; i<players.length; i++) {%>
+        <li><%= players[i].name %></li>
+    <% } %>
+</ul>
+
+<button id = "btn" onclick="toUpper()">click me</button>
+
+<script>
+    let names = document.querySelectorAll('#namesList li');
+    let playerNames = JSON.parse('<%- JSON.stringify(players) %>');
+    console.log(playerNames)
+    function toUpper(){
+        names.forEach(item=>{
+            if(item.textContent === item.textContent.toUpperCase()) item.textContent = item.textContent.toLowerCase()
+            else item.textContent = item.textContent.toUpperCase()
+        })
+    }
+</script>
+
+</body>
+</html>

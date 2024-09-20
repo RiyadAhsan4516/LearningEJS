@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+li{
+  font-family: cursive;
+  color: chocolate;
+}
+
+#btn{
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 20px;
+  height: 40px;
+  width: 70px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(112, 164, 242);
+}
+
+#btn:hover{
+  background-color: rgb(170, 199, 251);
+  transition: 120ms;
+  cursor: pointer;
+}
+
+a {
+  color: #00B7FF;
+}
