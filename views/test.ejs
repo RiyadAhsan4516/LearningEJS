@@ -18,8 +18,6 @@
 
 <button id = "btn" onclick="toUpper()">click me</button>
 
-<h2>This has been a successful test on ejs</h2>
-
 <script>
     let names = document.querySelectorAll('#namesList li');
     let playerNames = JSON.parse('<%- JSON.stringify(players) %>');
